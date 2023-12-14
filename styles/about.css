@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.containerA {
+    font-family: "Arial", sans-serif;
+    background-image: url("/album/background2.jpg");
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+    padding-top: 7rem;
+}
+
+.aboutContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1,
+h2 {
+    color: #3498db;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.aboutContainer {
+    background-color: #ffad84;
+    background-color: #ffe382;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 100px;
+    gap: 20px;
+}

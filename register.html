@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="path/to/font-awesome/css/font-awesome.min.css"
+        />
+
+        <script
+            src="https://kit.fontawesome.com/a9a14f16de.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="/styles/login.css" />
+        <link rel="stylesheet" href="/styles/footer.css" />
+        <link rel="stylesheet" href="/styles/header.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <nav>
+                <div class="logo">
+                    <div class="logoContainer">
+                        <a href="index.html"
+                            ><img src="/album/logo.png" alt=""
+                        /></a>
+                    </div>
+                </div>
+                <input type="checkbox" id="menu-toggle" />
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="menu">
+                    <li>
+                        <a href="index.html"
+                            ><i class="fa-solid fa-house-chimney"></i> Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="about.html"
+                            ><i class="fa-solid fa-circle-info"></i> About</a
+                        >
+                    </li>
+                    <li>
+                        <a href="myList.html">
+                            <i class="fa-solid fa-star"></i>My List</a
+                        >
+                    </li>
+                    <li>
+                        <a href="favorite.html">
+                            <i class="fa-solid fa-star"></i>Favorite</a
+                        >
+                    </li>
+                    <li>
+                        <a href="game.html"
+                            ><i class="fa-solid fa-gamepad"></i>Game</a
+                        >
+                    </li>
+                    <li>
+                        <a class="loginUser" href="login.html">Login</a>
+                    </li>
+                    <li>
+                        <a class="registerUser" href="register.html"
+                            >Register</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- HEADER -->
+        <div class="loginContainer">
+            <h2>Register</h2>
+
+            <form id="registerForm">
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" required /><br />
+
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" required /><br />
+
+                <button type="button" onclick="register()">Register</button>
+            </form>
+
+            <p id="loginStatus">
+                <a href="login.html">already have account ?</a>
+            </p>
+        </div>
+        <!-- FOOTER -->
+        <footer>
+            <img src="/album/logo.png" alt="Logo" width="150" />
+            <p>&copy; 2023 hamzagorcevic.com</p>
+            <a href="mailto:hamzagorcevic100@gmail.com" class="icon"
+                ><i class="fas fa-envelope"></i
+            ></a>
+            <a
+                href="https://github.com/HamzaGorcevic"
+                class="icon"
+                target="_blank"
+                ><i class="fab fa-github"></i
+            ></a>
+        </footer>
+        <!-- FOOTER -->
+        <script src="/scripts/register.js"></script>
+        <script src="/scripts/header.js"></script>
+    </body>
+</html>
