@@ -1,6 +1,6 @@
 .gameContainer {
     font-family: "Arial", sans-serif;
-    background-image: url("/album/gamebg.jpg");
+    background-image: url("../album/gamebg.jpg");
     background-size: cover;
     background-position: center;
     margin: 0;
