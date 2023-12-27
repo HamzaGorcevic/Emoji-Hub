@@ -12,10 +12,10 @@
             src="https://kit.fontawesome.com/a9a14f16de.js"
             crossorigin="anonymous"
         ></script>
-        <link rel="stylesheet" href="styles/login.css" />
+        <link rel="stylesheet" href="styleslogin.html.css" />
         <link rel="stylesheet" href="styles/footer.css" />
         <link rel="stylesheet" href="styles/header.css" />
-
+        <link rel="stylesheet" href="styles/login.css" />
         <title>Client-Side Registration and Login</title>
     </head>
     <body>
@@ -31,6 +31,7 @@
                 </div>
                 <input type="checkbox" id="menu-toggle" />
                 <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
                 <ul class="menu">
                     <li>
                         <a href="index.html"
@@ -73,11 +74,15 @@
             <h2>Login</h2>
 
             <form id="loginForm">
-                <label for="loginUsername">Username:</label>
-                <input type="text" id="loginUsername" required /><br />
+                <div class="inputGroup">
+                    <input type="text" id="loginUsername" required /><br />
+                    <label for="loginUsername">Username</label>
+                </div>
 
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" required /><br />
+                <div class="inputGroup">
+                    <input type="password" id="loginPassword" required /><br />
+                    <label for="loginPassword">Password</label>
+                </div>
 
                 <button type="button" onclick="login()">Login</button>
             </form>
@@ -102,7 +107,7 @@
             ></a>
         </footer>
         <!-- FOOTER -->
-        <script src="scripts/login.js"></script>
+        <script src="scriptslogin.html.js"></script>
         <script src="scripts/header.js"></script>
     </body>
 </html>

@@ -12,9 +12,11 @@
             src="https://kit.fontawesome.com/a9a14f16de.js"
             crossorigin="anonymous"
         ></script>
-        <link rel="stylesheet" href="styles/login.css" />
+        <link rel="stylesheet" href="styleslogin.html.css" />
         <link rel="stylesheet" href="styles/footer.css" />
         <link rel="stylesheet" href="styles/header.css" />
+        <link rel="stylesheet" href="styles/login.css" />
+
         <title>Document</title>
     </head>
     <body>
@@ -72,11 +74,14 @@
             <h2>Register</h2>
 
             <form id="registerForm">
-                <label for="regUsername">Username:</label>
-                <input type="text" id="regUsername" required /><br />
-
-                <label for="regPassword">Password:</label>
-                <input type="password" id="regPassword" required /><br />
+                <div class="inputGroup">
+                    <input type="text" id="regUsername" required /><br />
+                    <label for="regUsername">Username</label>
+                </div>
+                <div class="inputGroup">
+                    <input type="password" id="regPassword" required /><br />
+                    <label for="regPassword">Password</label>
+                </div>
 
                 <button type="button" onclick="register()">Register</button>
             </form>

@@ -1,4 +1,5 @@
 //
+
 const currentUser = localStorage.getItem("loggedInUser");
 function addToList(selectedList) {
     console.log("ASD", selectedList);
@@ -70,7 +71,8 @@ function displayEmojis(emojis) {
         emojiDiv.classList.add("emojiDiv");
         emojiDiv.append(emojiElement);
 
-        emojiDiv.onclick = function () {
+        emojiDiv.onclick = function (e) {
+            console.log(e.target.classList);
             document.execCommand("copy");
         };
 
