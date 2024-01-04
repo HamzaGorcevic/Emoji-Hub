@@ -1,6 +1,7 @@
 let loginUser = document.querySelector(".loginUser");
 let registerUser = document.querySelector(".registerUser");
 let menuH = document.querySelector(".menu");
+let myLi = document.querySelector(".myLi");
 let loggedInUser = localStorage.getItem("loggedInUser");
 if (loggedInUser) {
     var logout = document.createElement("li");
@@ -10,6 +11,8 @@ if (loggedInUser) {
     loginUser.style.display = "none";
     registerUser.style.display = "none";
     menuH.append(logout);
+} else {
+    myLi.style.display = "none";
 }
 logout.addEventListener("click", () => {
     window.location.href = "login.html";

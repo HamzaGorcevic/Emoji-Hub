@@ -3,12 +3,12 @@ function simpleHash(input) {
 
     for (let i = 0; i < input.length; i++) {
         const char = input.charCodeAt(i);
-        console.log(char);
         hash = (hash << 2) - hash + char;
     }
 
     return hash;
 }
+
 function login() {
     var loginUsername = document.getElementById("loginUsername").value;
     var loginPassword = document.getElementById("loginPassword").value;
@@ -19,9 +19,10 @@ function login() {
         simpleHash(loginPassword)
     ) {
         localStorage.setItem("loggedInUser", loginUsername);
-
         window.location.href = "index.html";
+        console.log("logged in");
     } else {
+        console.log("logged in");
         document.getElementById("loginStatus").innerText =
             "Login failed. Please try again.";
     }
