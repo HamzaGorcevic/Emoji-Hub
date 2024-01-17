@@ -28,6 +28,8 @@ editorToggle.addEventListener("click", () => {
 });
 // editor end
 save.addEventListener("click", () => {
+    save.textContent = "Saved";
+
     addToList(textArea.value);
 });
 copyBtn.onclick = function () {
@@ -72,6 +74,8 @@ function displayEmojis(emojis) {
         emojiDiv.append(emojiElement);
 
         emojiDiv.onclick = function (e) {
+            save.textContent = "Save";
+
             console.log(e.target.classList);
             document.execCommand("copy");
         };

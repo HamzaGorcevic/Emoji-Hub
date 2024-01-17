@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lost Page</title>
         <link
             rel="stylesheet"
             href="path/to/font-awesome/css/font-awesome.min.css"
@@ -12,11 +13,53 @@
             src="https://kit.fontawesome.com/a9a14f16de.js"
             crossorigin="anonymous"
         ></script>
-        <link rel="stylesheet" href="styleslogin.html.css" />
-        <link rel="stylesheet" href="styles/footer.css" />
-        <link rel="stylesheet" href="styles/header.css" />
-        <link rel="stylesheet" href="styles/login.css" />
-        <title>Client-Side Registration and Login</title>
+        <link rel="stylesheet" href="./styles/header.css" />
+        <link rel="stylesheet" href="./styles/footer.css" />
+
+        <style>
+            .lostContainer {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-image: url("./album/lostpage.png");
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .lost-container {
+                text-align: center;
+                max-width: 600px;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                color: #333;
+            }
+
+            p {
+                color: #555;
+            }
+
+            .register-btn {
+                display: inline-block;
+                padding: 10px 20px;
+                margin-top: 20px;
+                background-color: #34db85;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .register-btn:hover {
+                background-color: #2980b9;
+            }
+        </style>
     </head>
     <body>
         <header class="header">
@@ -68,28 +111,16 @@
             </nav>
         </header>
         <!-- HEADER -->
-        <div class="loginContainer">
-            <h2>Login</h2>
-
-            <form id="loginForm">
-                <div class="inputGroup">
-                    <input type="text" id="loginUsername" required /><br />
-                    <label for="loginUsername">Username</label>
-                </div>
-
-                <div class="inputGroup">
-                    <input type="password" id="loginPassword" required /><br />
-                    <label for="loginPassword">Password</label>
-                </div>
-
-                <button type="button" onclick="login()">Login</button>
-            </form>
-
-            <p id="loginStatus">
-                <a href="register.html">Dont have account ?</a>
-            </p>
+        <div class="lostContainer">
+            <div class="lost-container">
+                <h1>Lost Page</h1>
+                <p>
+                    It seems like you've lost your way. Please register to
+                    access the content.
+                </p>
+                <a href="register.html" class="register-btn">Register Now</a>
+            </div>
         </div>
-
         <!-- FOOTER -->
         <footer>
             <img src="album/logo.png" alt="Logo" width="150" />
@@ -104,8 +135,7 @@
                 ><i class="fab fa-github"></i
             ></a>
         </footer>
+        <script src="./scripts/header.js"></script>
         <!-- FOOTER -->
-        <script src="scripts/login.js"></script>
-        <script src="scripts/header.js"></script>
     </body>
 </html>

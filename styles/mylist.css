@@ -4,18 +4,18 @@
     box-sizing: border-box;
 }
 
-.container {
+.myListContainer {
     margin-top: 50px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
-    background-image: url("../album/bglist.jpg");
+    background-image: url("../album/mylist.png");
     background-position: center;
-    height: 100vh;
+    background-size: contain;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .emoji-container {
     color: white;
     border-radius: 8px;
