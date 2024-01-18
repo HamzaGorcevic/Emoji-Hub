@@ -156,9 +156,11 @@
 
 .editor {
     z-index: 100;
-    position: absolute;
+    position: fixed;
     right: 10px;
     bottom: 30px;
+    top: 50%;
+
     border: 3px solid white;
     border-radius: 20px;
     background-color: rgb(100, 207, 100);

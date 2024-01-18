@@ -64,6 +64,7 @@
                             >Register</a
                         >
                     </li>
+                    <div id="google_translate_element"></div>
                 </ul>
             </nav>
         </header>
@@ -103,5 +104,15 @@
         <!-- FOOTER -->
         <script src="scripts/game.js"></script>
         <script src="scripts/header.js"></script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+
+        <script>
+            function googleTranslateInit() {
+                new google.translate.TranslateElement(
+                    { pageLanguage: "en" },
+                    "google_translate_element"
+                );
+            }
+        </script>
     </body>
 </html>
