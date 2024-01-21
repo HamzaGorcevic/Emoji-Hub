@@ -8,11 +8,18 @@
 }
 .logoContainer {
     width: 150px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    position: relative;
+    height: 150px;
 }
 .logoContainer img {
     width: 100%;
+    position: absolute;
+    left: 0;
+    top: 20px;
 }
 
 .header {

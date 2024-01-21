@@ -5,13 +5,14 @@
 }
 
 .myListContainer {
-    margin-top: 50px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
     background-image: url("../album/mylist.png");
-    background-position: center;
-    background-size: contain;
-    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
