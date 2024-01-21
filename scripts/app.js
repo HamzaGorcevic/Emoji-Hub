@@ -5,8 +5,8 @@ function addToList(selectedList) {
     console.log("ASD", selectedList);
     console.log(JSON.parse(localStorage.getItem(currentUser)));
     let usersInfo = JSON.parse(localStorage.getItem(currentUser));
-    usersInfo.myList.push(selectedList);
-    console.log("userinfo", usersInfo.myList);
+    usersInfo.mylist.push(selectedList);
+    console.log("userinfo", usersInfo.mylist);
     localStorage.setItem(currentUser, JSON.stringify(usersInfo));
 }
 //

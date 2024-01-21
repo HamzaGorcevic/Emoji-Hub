@@ -29,7 +29,7 @@ function register() {
             username: regUsername,
             password: simpleHash(regPassword),
             score: 0,
-            myList: [],
+            mylist: [],
         });
         localStorage.setItem(regUsername, objToPush);
         window.location.href = "login.html";
