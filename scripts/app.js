@@ -33,6 +33,7 @@ save.addEventListener("click", () => {
     addToList(textArea.value);
 });
 copyBtn.onclick = function () {
+    copyBtn.innerHTML = "Copied";
     document.execCommand("copy");
 };
 copyBtn.addEventListener("copy", (event) => {
@@ -75,6 +76,7 @@ function displayEmojis(emojis) {
 
         emojiDiv.onclick = function (e) {
             save.textContent = "Save";
+            copyBtn.innerHTML = "Copy";
 
             console.log(e.target.classList);
             document.execCommand("copy");

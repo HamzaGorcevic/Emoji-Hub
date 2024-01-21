@@ -239,6 +239,9 @@ textarea::placeholder {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+    .emojiDiv::after {
+        font-size: 0;
+    }
     .emojisContainer {
         width: 100%;
         padding: 0;

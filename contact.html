@@ -37,6 +37,11 @@
                         >
                     </li>
                     <li>
+                        <a href="contact.html"
+                            ><i class="fa-solid fa-envelope"></i> Contact me</a
+                        >
+                    </li>
+                    <li>
                         <a href="about.html"
                             ><i class="fa-solid fa-circle-info"></i> About</a
                         >
@@ -85,6 +90,7 @@
                         <input type="text" name="email" id="email" required />
                         <span></span>
                         <label>Email</label>
+                        <span class="error"></span>
                     </div>
 
                     <div class="txt_field">
@@ -130,6 +136,8 @@
         <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
 
         <script>
+            message = document.getElementById("message").value;
+            console.log("meess", message);
             function googleTranslateInit() {
                 new google.translate.TranslateElement(
                     { pageLanguage: "en" },
