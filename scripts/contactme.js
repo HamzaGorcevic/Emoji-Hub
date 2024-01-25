@@ -15,13 +15,19 @@ btnSubmit.addEventListener("click", (e) => {
     let regexMessage = /^[A-Z][a-z, ]+(\s*[, ][A-Za-z]+)*[\.?!]$/;
     let nizRecenica = message.value.split(/(?<=[.?!])/);
     let check = false;
+    let duzina = 0;
     for (let i of nizRecenica) {
         if (i != "") {
+            duzina += i.length;
             i = i.trim();
             check = regexMessage.test(i);
 
             console.log(i, check);
         }
+    }
+    if (duzina > 250) {
+        check = false;
+        msgVal = "Tekst je predugacak.";
     }
     console.log(check);
 
