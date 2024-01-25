@@ -3,18 +3,11 @@ function simpleHash(input) {
 
     for (let i = 0; i < input.length; i++) {
         const char = input.charCodeAt(i);
-        console.log(char);
         hash = (hash << 2) - hash + char;
     }
 
     return hash;
 }
-
-// Example usage
-const inputString = "hamza";
-const hashedValue = simpleHash(inputString);
-console.log(105 << 2);
-console.log(hashedValue);
 
 function register() {
     var regUsername = document.getElementById("regUsername").value;
@@ -47,12 +40,65 @@ function register() {
     }
 
     // Store user information in local storage
+
     let objToPush = JSON.stringify({
-        username: regUsername,
+        user: regUsername,
         password: simpleHash(regPassword),
         score: 0,
         mylist: [],
     });
     localStorage.setItem(regUsername, objToPush);
-    window.location.href = "login.html";
+    const apiUrl = "./database.json";
+
+    postData(apiUrl, {
+        username: regUsername,
+        password: JSON.stringify(simpleHash(regPassword)),
+    }).then((res) => {
+        console.log("response", res);
+    });
+}
+
+async function postData(url = "", data = {}) {
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.includes("application/json")) {
+            return await response.json();
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error("Error during POST request:", error);
+        throw error;
+    }
+}
+
+async function postData(url = "", data = {}) {
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error("Error during POST request:", error);
+        throw error;
+    }
 }
