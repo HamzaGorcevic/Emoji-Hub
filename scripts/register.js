@@ -17,26 +17,40 @@ function register() {
         document.getElementById("usernameError").innerText =
             "Username is required";
         return;
+    } else {
+        document.getElementById("usernameError").innerText = "";
     }
+
     if (regPassword.trim() === "") {
         document.getElementById("passwordError").innerText =
             "Password is required";
         return;
+    } else {
+        document.getElementById("passwordError").innerText = "";
     }
+
     if (localStorage.getItem(regUsername)) {
         document.getElementById("usernameError").innerText =
             "User already exists";
+    } else {
+        document.getElementById("usernameError").innerText = "";
     }
+
     if (regPassword.length < 5) {
-        document.getElementById("passwordError").innerHTML =
+        document.getElementById("passwordError").innerText =
             "Password must be above 5 characters";
         return;
+    } else {
+        document.getElementById("passwordError").innerText = "";
     }
+
     var passwordRegex = /^(?=.*[A-Z])(?=.*\d).{5,}$/;
     if (!passwordRegex.test(regPassword)) {
         document.getElementById("passwordError").innerText =
             "Password must be at least 5 characters long, contain at least one uppercase letter, and at least one digit.";
         return;
+    } else {
+        document.getElementById("passwordError").innerText = "";
     }
 
     // Store user information in local storage
@@ -48,55 +62,40 @@ function register() {
         mylist: [],
     });
     localStorage.setItem(regUsername, objToPush);
-    const apiUrl = "./database.json";
+    // window.location.href = "login.html";
 
+    // U slucaju da dobijem api na koji mogu da postavim
+
+    // const apiUrl = "https://emojihubusers.wiremockapi.cloud/users";
+    const apiUrl =
+        "https://api.restful-api.dev/objects/ff8081818d2cb651018d4719403822de";
     postData(apiUrl, {
-        username: regUsername,
-        password: JSON.stringify(simpleHash(regPassword)),
-    }).then((res) => {
-        console.log("response", res);
-    });
+        name: regUsername,
+        data: {
+            username: regUsername,
+            password: JSON.stringify(simpleHash(regPassword)),
+        },
+    })
+        .then((res) => {
+            res.json();
+        })
+        .then((response) => {
+            console.log(response);
+        });
 }
 
 async function postData(url = "", data = {}) {
     try {
         const response = await fetch(url, {
-            method: "POST",
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(data),
-        });
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const contentType = response.headers.get("content-type");
-        if (contentType && contentType.includes("application/json")) {
-            return await response.json();
-        } else {
-            return null;
-        }
-    } catch (error) {
-        console.error("Error during POST request:", error);
-        throw error;
-    }
-}
 
-async function postData(url = "", data = {}) {
-    try {
-        const response = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
             body: JSON.stringify(data),
         });
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        return await response.json();
+        return response;
     } catch (error) {
         console.error("Error during POST request:", error);
         throw error;
