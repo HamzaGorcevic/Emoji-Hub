@@ -22,6 +22,12 @@
     margin-top: 50px;
 }
 
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
 .emoji-item:nth-child(2) h2 {
     color: #ff8c00;
 }
