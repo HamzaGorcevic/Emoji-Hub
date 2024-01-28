@@ -15,83 +15,13 @@
         ></script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+
         <link rel="stylesheet" href="styles/mylist.css" />
-        <style>
-            .favoriteContainer {
-                font-family: "Arial", sans-serif;
-                display: flex;
-                background-image: url("album/background.jpg");
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
-                margin: 0;
-                flex-direction: column;
-                padding-bottom: 100px;
-            }
-            .favorite-title {
-                color: white;
-            }
-            .emoji-list {
-                max-width: 600px;
-                padding: 20px;
-                background-color: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-                text-align: left;
-                margin-top: 50px;
-            }
-
-            .emoji-item {
-                margin-bottom: 20px;
-            }
-
-            .emoji-item h2 {
-                font-size: 1.5rem;
-                margin-bottom: 10px;
-            }
-
-            .emoji-item p {
-                font-size: 1rem;
-                color: #555;
-            }
-
-            /* Specific styles for individual emojis */
-            .emoji-item:nth-child(2) h2 {
-                color: #ff8c00; /* Change color for "Person with folded hands" */
-            }
-
-            .emoji-item:nth-child(3) h2 {
-                color: #ff1493; /* Change color for "Smiling face with hearts" */
-            }
-
-            .emoji-item:nth-child(4) h2 {
-                color: #228b22; /* Change color for "Pleading face" */
-            }
-            .emoji-item:nth-child(7) h2 {
-                color: #ff8c00; /* Change color for "Pleading face" */
-            }
-            .emoji-item:nth-child(8) h2 {
-                color: #555; /* Change color for "Pleading face" */
-            }
-            .emoji-item:nth-child(9) h2 {
-                color: greenyellow; /* Change color for "Pleading face" */
-            }
-            .emoji-item:nth-child(10) h2 {
-                color: red; /* Change color for "Pleading face" */
-            }
-            .emoji-item:nth-child(6) h2 {
-                color: teal; /* Change color for "Pleading face" */
-            }
-            .favoriteTitleDiv {
-                margin-top: 200px;
-                background-color: teal;
-                text-align: center;
-                border-radius: 20px;
-                padding: 20px;
-            }
-
-            /* Add more specific styles as needed */
-        </style>
+        <link rel="stylesheet" href="styles/favorite.css" />
 
         <title>Most-Used Emojis 2022</title>
     </head>
@@ -150,6 +80,7 @@
                 </ul>
             </nav>
         </header>
+
         <!-- HEADER -->
         <div class="favoriteContainer">
             <div class="favoriteTitleDiv">
@@ -161,114 +92,123 @@
                     popular? We have the data.
                 </p>
             </div>
-            <div class="emoji-list">
-                <div class="emoji-item">
-                    <h2>10. Sparkles emoji ✨</h2>
-                    <p>
-                        Since last year, the sparkle emoji has moved down to the
-                        bottom of the list – from #3 to #10. This emoji
-                        frequently goes hand-in-hand with messages of
-                        excitement...
-                    </p>
-                </div>
+            <div class="emoji-list" style="background: rgba(0, 0, 0, 0.311)">
+                <div class="emoji-list">
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">10. Sparkles emoji ✨</h2>
+                        <p class="text-secondary">
+                            Since last year, the sparkle emoji has moved down to
+                            the bottom of the list – from #3 to #10. This emoji
+                            frequently goes hand-in-hand with messages of
+                            excitement...
+                        </p>
+                    </div>
 
-                <div class="emoji-item">
-                    <h2>9. Person with folded hands 🙏</h2>
-                    <p>
-                        🙏 has moved up one position in the chart since last
-                        year. The emoji depicting two hands pressed together
-                        with fingers pointed up is widely used in online
-                        conversations to say thanks, to request something, as
-                        well as to express hope, praise, and gratitude...
-                    </p>
-                </div>
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">9. Person with folded hands 🙏</h2>
+                        <p class="text-secondary">
+                            🙏 has moved up one position in the chart since last
+                            year. The emoji depicting two hands pressed together
+                            with fingers pointed up is widely used in online
+                            conversations to say thanks, to request something,
+                            as well as to express hope, praise, and gratitude...
+                        </p>
+                    </div>
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">8. Smiling face with hearts 🥰</h2>
+                        <p class="text-secondary">
+                            This “smiling face with hearts” or “cloud of love
+                            face” emoji, frequently used to showcase the
+                            sensation of feeling loved, has been propelled
+                            forward one place, making it to #8 in the top 10
+                            list this year...
+                        </p>
+                    </div>
 
-                <div class="emoji-item">
-                    <h2>8. Smiling face with hearts 🥰</h2>
-                    <p>
-                        This “smiling face with hearts” or “cloud of love face”
-                        emoji, frequently used to showcase the sensation of
-                        feeling loved, has been propelled forward one place,
-                        making it to #8 in the top 10 list this year...
-                    </p>
-                </div>
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">7. Pleading face 🥺</h2>
+                        <p class="text-secondary">
+                            This emoji has lost two places in the top 10 list,
+                            moving down from #5 to #7. The “large puppy-dog
+                            eyes” emoji has several use cases. Some people use
+                            🥺 to let others know they are upset or worried, and
+                            others use it to convey a sense of care...
+                        </p>
+                    </div>
 
-                <div class="emoji-item">
-                    <h2>7. Pleading face 🥺</h2>
-                    <p>
-                        This emoji has lost two places in the top 10 list,
-                        moving down from #5 to #7. The “large puppy-dog eyes”
-                        emoji has several use cases. Some people use 🥺 to let
-                        others know they are upset or worried, and others use it
-                        to convey a sense of care...
-                    </p>
-                </div>
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">
+                            6. Smiling face with heart-shaped eyes 😍
+                        </h2>
+                        <p class="text-secondary">
+                            😍 has gained two places, moving from #8 to #6 in
+                            the top 10 list since the last report in 2021. This
+                            smiling face with hearts instead of eyes emoji
+                            enthusiastically conveys love, infatuation, and
+                            admiration...
+                        </p>
+                    </div>
 
-                <div class="emoji-item">
-                    <h2>6. Smiling face with heart-shaped eyes 😍</h2>
-                    <p>
-                        😍 has gained two places, moving from #8 to #6 in the
-                        top 10 list since the last report in 2021. This smiling
-                        face with hearts instead of eyes emoji enthusiastically
-                        conveys love, infatuation, and admiration...
-                    </p>
-                </div>
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">5. Fire 🔥</h2>
+                        <p class="text-secondary">
+                            🔥 has moved up from #7 to #5 since 2021. An obvious
+                            internet favorite, the fire emoji is frequently
+                            paired with announcements of achievements or
+                            success...
+                        </p>
+                    </div>
 
-                <div class="emoji-item">
-                    <h2>5. Fire 🔥</h2>
-                    <p>
-                        🔥 has moved up from #7 to #5 since 2021. An obvious
-                        internet favorite, the fire emoji is frequently paired
-                        with announcements of achievements or success...
-                    </p>
-                </div>
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">
+                            4. Rolling on the floor laughing emoji 🤣
+                        </h2>
+                        <p class="text-secondary">
+                            🤣 has remained #4 in the list since last year. A
+                            visual equivalent of ROFL, or what Urban Dictionary
+                            users describe as a common response for “when
+                            somebody says something dumb.”...
+                        </p>
+                    </div>
 
-                <div class="emoji-item">
-                    <h2>4. Rolling on the floor laughing emoji 🤣</h2>
-                    <p>
-                        🤣 has remained #4 in the list since last year. A visual
-                        equivalent of ROFL, or what Urban Dictionary users
-                        describe as a common response for “when somebody says
-                        something dumb.”...
-                    </p>
-                </div>
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">3. Red heart ❤️</h2>
+                        <p class="text-secondary">
+                            Since last year, ❤️ has moved up one place, making
+                            #3 in the top 10 list. The red heart emoji is
+                            universally recognized as a sign of love and
+                            gratitude, and we pair ❤️ with positive messages and
+                            when expressing good feelings...
+                        </p>
+                    </div>
 
-                <div class="emoji-item">
-                    <h2>3. Red heart ❤️</h2>
-                    <p>
-                        Since last year, ❤️ has moved up one place, making #3 in
-                        the top 10 list. The red heart emoji is universally
-                        recognized as a sign of love and gratitude, and we pair
-                        ❤️ with positive messages and when expressing good
-                        feelings...
-                    </p>
-                </div>
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">2. Loudly crying face 😭</h2>
+                        <p class="text-secondary">
+                            The loudly crying face lost one position and made it
+                            to the second-place spot this year. Context matters.
+                            A yellow face with an open mouth wailing and streams
+                            of heavy tears might for a second confuse an
+                            unprepared user, but fear not: while 😭 can be used
+                            to convey grief, this emoji has overwhelmingly been
+                            used to share positivity...
+                        </p>
+                    </div>
 
-                <div class="emoji-item">
-                    <h2>2. Loudly crying face 😭</h2>
-                    <p>
-                        The loudly crying face lost one position and made it to
-                        the second-place spot this year. Context matters. A
-                        yellow face with an open mouth wailing and streams of
-                        heavy tears might for a second confuse an unprepared
-                        user, but fear not: while 😭 can be used to convey
-                        grief, this emoji has overwhelmingly been used to share
-                        positivity...
-                    </p>
-                </div>
-
-                <div class="emoji-item">
-                    <h2>1. Face with tears of joy 😂</h2>
-                    <p>
-                        The ongoing battle between 😂 and 😭 may have influenced
-                        the triumphal comeback of the “face with tears of joy”
-                        emoji – and making it to the first place in the list.
-                        The 😂 emoji got pushed off the first place in 2021, and
-                        Gen-Z TikTok users may have had a hand in it. They
-                        declared earlier that year that using the laugh-cry
-                        emoji makes you out of touch, yet we saw a lot of
-                        laughing across social accompanied by 😂...
-                    </p>
+                    <div class="emoji-item bg-light p-4 mb-4 rounded">
+                        <h2 class="">1. Face with tears of joy 😂</h2>
+                        <p class="text-secondary">
+                            The ongoing battle between 😂 and 😭 may have
+                            influenced the triumphal comeback of the “face with
+                            tears of joy” emoji – and making it to the first
+                            place in the list. The 😂 emoji got pushed off the
+                            first place in 2021, and Gen-Z TikTok users may have
+                            had a hand in it. They declared earlier that year
+                            that using the laugh-cry emoji makes you out of
+                            touch, yet we saw a lot of laughing across social
+                            accompanied by 😂...
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
