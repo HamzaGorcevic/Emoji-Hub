@@ -62,7 +62,7 @@ function register() {
         mylist: [],
     });
     localStorage.setItem(regUsername, objToPush);
-    // window.location.href = "login.html";
+    window.location.href = "login.html";
 
     // U slucaju da dobijem api na koji mogu da postavim
 
